@@ -1,0 +1,61 @@
+<title>Dashboard Template for TNA</title>
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+
+
+        
+      </button>
+      <a class="navbar-brand" href="#">TNA Dashboard</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+ 
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a>
+          <span id="sp_time"></span>
+            <script type="text/javascript">
+            setInterval(function(){
+            var dd = new Date();
+            var y = dd.getFullYear();
+            var m = dd.getMonth() + 1;
+            var d = dd.getDate();
+            var h = dd.getHours();
+            var mi = dd.getMinutes();
+            var s = dd.getSeconds();
+            var str = y + "/" + m + "/" + d + "&nbsp;&nbsp;" + h + ":" + mi + ":" + s + "&nbsp;Weekdays&nbsp;&nbsp;" + "7123456".charAt(dd.getDay());
+            document.getElementById("sp_time").innerHTML = str;
+            },1000);
+            </script>
+
+        </a></li>
+        <li><a href="missing_index.html" target="view_window">TNA Missing</a></li>
+        <li><a href="Price_Report.html" target="view_window">NAV</a></li>
+        <li><a href="right.html" target="view_window">Dividend</a></li>
+        <li><a href="left.html" target="view_window">MRR</a></li>
+        <li><a href="Mailto:xxxxxx@xxxxxxx.com?CC=xxxxxx@xxxxxxx.com&Subject=Data Dashboard&Body=we need some Tech Support">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+
